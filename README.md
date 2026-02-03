@@ -50,7 +50,7 @@ It is designed to help learners understand the **entire drone system**, from PCB
 ---
 
 ## 특징 (KR)
-1. 교육/연구용에 최적화된 모듈 구조 (`CORE`, `BINDING`, `HOVER`, `EasyCommander`)
+1. 교육/연구용에 최적화된 모듈 구조 (`CORE`, `BINDING`, `HOVER`, `EasyCommander`, `AutoTune`, `GPIO`, `PID`)
 2. PC 도구 제공
    - 펌웨어 업로더 (PYW + 자동 의존성 설치)
    - IMU 뷰어 (PYW + 자동 의존성 설치, 그래프/3D 자세 표시)
@@ -58,7 +58,7 @@ It is designed to help learners understand the **entire drone system**, from PCB
 4. UI 한글/영문 자동 전환 지원
 
 ## Highlights (EN)
-1. Modular structure optimized for education/research (`CORE`, `BINDING`, `HOVER`, `EasyCommander`)
+1. Modular structure optimized for education/research (`CORE`, `BINDING`, `HOVER`, `EasyCommander`, `AutoTune`, `GPIO`, `PID`)
 2. PC tools included
    - Firmware updater (PYW + auto dependency install)
    - IMU viewer (PYW + auto dependency install, graph/3D attitude)
@@ -75,6 +75,9 @@ AF1000X/
 ├─ AF1000X_BINDING.h
 ├─ AF1000X_Hover.h
 ├─ AF1000X_EasyCommander.h
+├─ AF1000X_AutoTune.h
+├─ AF1000X_GPIO.h
+├─ AF1000X_PID.h
 ├─ README.md
 ```
 
