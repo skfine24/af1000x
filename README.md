@@ -1,10 +1,10 @@
-# AF1000X Remote Controller
+# AR1000X Remote Controller
 ### Drone Controller and PC Hub Transmitter for AF1000X
 
 ## English
 
 ### Overview
-**AF1000X Remote Controller** is an RP2040-based transmitter that works as a **PC hub**.  
+**AR1000X Remote Controller** is an RP2040-based transmitter that works as a **PC hub**.  
 It converts USB serial commands from a PC into RF control signals for the drone.
 
 - PC (USB Serial) -> AF1000X Controller (nRF24) -> Drone
@@ -126,7 +126,7 @@ For purchase inquiries, please contact `hello@1510.co.kr`.
 ### AF1000X 드론 컨트롤러 및 PC 허브 송신기
 
 ### 개요
-**AF1000X Remote Controller**는 RP2040 기반 조종기로 **PC 허브**처럼 동작합니다.  
+**AR1000X Remote Controller**는 RP2040 기반 조종기로 **PC 허브**처럼 동작합니다.  
 PC의 USB 시리얼 명령을 RF 제어 신호로 변환해 드론에 전송합니다.
 
 - PC(USB Serial) -> AF1000X Controller(nRF24) -> Drone
@@ -248,7 +248,7 @@ SYUBEA Co., Ltd. (Korea)
 ### AF1000X ドローンコントローラ兼 PC ハブ送信機
 
 ### 概要
-**AF1000X Remote Controller** は RP2040 ベースの送信機で、**PC ハブ**として動作します。  
+**AR1000X Remote Controller** は RP2040 ベースの送信機で、**PC ハブ**として動作します。  
 PC の USB シリアル命令を RF 制御信号に変換してドローンへ送信します。
 
 - PC(USB Serial) -> AF1000X Controller(nRF24) -> Drone
