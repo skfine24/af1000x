@@ -6,8 +6,8 @@
 AF1000X flight controller board. This README provides top and bottom view images and key mechanical specifications for GitHub.
 
 ### Images
-![Top View](IMG/AF1000X_FC_top.png)
-![Bottom View](IMG/AF1000X_FC_bottom.png)
+![Top View](AF1000X_FC_top.png)
+![Bottom View](AF1000X_FC_bottom.png)
 
 ### Mechanical Specifications
 - Board version: 01.10
@@ -23,8 +23,8 @@ AF1000X flight controller board. This README provides top and bottom view images
 AF1000X 비행 컨트롤러 보드입니다. GitHub용으로 윗면/바닥면 이미지와 기계적 사양을 정리합니다.
 
 ### 이미지
-![윗면](IMG/AF1000X_FC_top.png)
-![바닥면](IMG/AF1000X_FC_bottom.png)
+![윗면](AF1000X_FC_top.png)
+![바닥면](AF1000X_FC_bottom.png)
 
 ### 기계적 사양
 - 보드 버전: 01.10
@@ -40,8 +40,8 @@ AF1000X 비행 컨트롤러 보드입니다. GitHub용으로 윗면/바닥면 �
 AF1000X フライトコントローラ基板です。GitHub向けに上面/下面の画像と機械仕様をまとめています。
 
 ### 画像
-![上面](IMG/AF1000X_FC_top.png)
-![下面](IMG/AF1000X_FC_bottom.png)
+![上面](AF1000X_FC_top.png)
+![下面](AF1000X_FC_bottom.png)
 
 ### 機械仕様
 - ボードバージョン: 01.10
