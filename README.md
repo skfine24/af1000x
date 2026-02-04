@@ -16,7 +16,7 @@ AF1000X is a smart micro drone and reference platform built for education and ra
 1. Hover learning: automatically adjusts `hoverThrottle` based on stable hover and saves it.
 2. Auto tuning: runs altitude PD and yaw P tuning after hover ready and stores the results.
 
-### Accessory I O (Servo + User LED)
+### Accessory I/O (Servo + User LED)
 - Micro servo PWM output at 50 Hz (GPIO36), 900 to 2000 us range.
 - User LED output on GPIO17. Default targets WS2812C (single wire NeoPixel class).
 - WS2801C power supply pads are supported; control requires a dedicated SPI build.
