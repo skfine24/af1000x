@@ -168,8 +168,8 @@ See `IMG/README.md` for board images and mechanical details.
 - `AF1000X_Hover.h` - hover and altitude control
 - `AF1000X_PID.h` - PID defaults and tuning constants
 - `AF1000X_WIFI.h` - Wi-Fi input bridge (experimental)
-- `WIFI.MD` - Wi-Fi command reference (experimental)
-- `af1000x_wifi_controller_ui.py` - Wi-Fi app test UI (Mode 2)
+- `DOCS/WIFI.MD` - Wi-Fi command reference (experimental)
+- `TOOL/PY/af1000x_wifi_controller_ui.py` - Wi-Fi app test UI (Mode 2)
 
 ## Safety / Warnings
 - Always remove propellers before firmware updates or bench testing.
@@ -342,8 +342,8 @@ POST FAIL -> FLIGHT LOCK (IMU=0 BARO=1 TOF=1 FLOW=1)
 - `AF1000X_Hover.h` - 호버 및 고도 제어
 - `AF1000X_PID.h` - PID 기본값 및 튜닝 상수
 - `AF1000X_WIFI.h` - Wi-Fi 입력 브릿지(실험)
-- `WIFI.MD` - Wi-Fi 명령 정리(실험)
-- `af1000x_wifi_controller_ui.py` - Wi-Fi 앱 테스트 UI (Mode 2)
+- `DOCS/WIFI.MD` - Wi-Fi 명령 정리(실험)
+- `TOOL/PY/af1000x_wifi_controller_ui.py` - Wi-Fi 앱 테스트 UI (Mode 2)
 
 ## 안전 / 경고
 - 펌웨어 업데이트나 벤치 테스트 전에는 반드시 프로펠러를 분리하세요.
@@ -516,8 +516,8 @@ POST FAIL -> FLIGHT LOCK (IMU=0 BARO=1 TOF=1 FLOW=1)
 - `AF1000X_Hover.h` - ホバーと高度制御
 - `AF1000X_PID.h` - PIDデフォルトとチューニング定数
 - `AF1000X_WIFI.h` - Wi-Fi入力ブリッジ(実験)
-- `WIFI.MD` - Wi-Fiコマンド整理(実験)
-- `af1000x_wifi_controller_ui.py` - Wi-FiアプリテストUI (Mode 2)
+- `DOCS/WIFI.MD` - Wi-Fiコマンド整理(実験)
+- `TOOL/PY/af1000x_wifi_controller_ui.py` - Wi-FiアプリテストUI (Mode 2)
 
 ## 安全 / 警告
 - ファームウェア更新やベンチテストの前に、必ずプロペラを外してください。

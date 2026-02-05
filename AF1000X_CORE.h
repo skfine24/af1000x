@@ -106,6 +106,7 @@ static const uint8_t AUX1_FLIP_ROLL_POS  = 5;
 static const uint8_t AUX1_FLIP_ROLL_NEG  = 6;
 static const uint8_t AUX1_FLIP_PITCH_POS = 7;
 static const uint8_t AUX1_FLIP_PITCH_NEG = 8;
+#include "AF1000X_WIFI.h"
 
 struct Telemetry {
   float vbat, alt, posX, posY;
@@ -134,6 +135,7 @@ static const uint32_t HOP_SCAN_MS = 20;
 RF24 radio(PIN_RF_CE, PIN_RF_CSN);
 Preferences prefs;
 Signal receiverData{};
+Signal receiverDataRc{};
 Telemetry telemetryData{};
 uint32_t lastRxMs = 0;
 bool failsafe = false;
@@ -870,13 +872,13 @@ static inline void updateRadio(){
   fhssUpdate(now);
 
   if(radio.available()){
-    radio.read(&receiverData, sizeof(Signal));
+    radio.read(&receiverDataRc, sizeof(Signal));
     lastRxMs = now;
     failsafe = false;
-    fhssResync(receiverData.hop, now);
+    fhssResync(receiverDataRc.hop, now);
 
-    if(receiverData.speed >= 1 && receiverData.speed <= 3){
-      speedLevel = receiverData.speed - 1;
+    if(receiverDataRc.speed >= 1 && receiverDataRc.speed <= 3){
+      speedLevel = receiverDataRc.speed - 1;
     }
 
     telemetryData.vbat = batteryVoltage;
@@ -889,11 +891,10 @@ static inline void updateRadio(){
   }
 
   if(now - lastRxMs > FAILSAFE_MS){
+  if(!wifiActive){
     failsafe = true;
     hopSynced = false;
     if(currentMode != MODE_READY && currentMode != MODE_EMERGENCY){
-
-      // KO: 럹씪꽭씠봽 떆 쁽옱 쐞移/슂 쑀吏 썑 李⑸쪠
       // EN: On failsafe, hold current pos/yaw then land
       targetPosX = currentPosX;
       targetPosY = currentPosY;
@@ -901,7 +902,11 @@ static inline void updateRadio(){
 
       currentMode = MODE_LANDING;
     }
+  } else {
+    failsafe = false;
   }
+}
+
 }
 
 // ============================================================================
@@ -1899,6 +1904,7 @@ static inline void updateSystem(){
   // EN: Always update binding state first
   binding_update();
   g_ledBound = binding_isBound();
+  wifiInputTick();
 
   static bool lastBound = false;
   if(g_ledBound && !lastBound){
@@ -1933,7 +1939,7 @@ static inline void updateSystem(){
   // EN: Drive LEDs during boot/binding too
   ledTick();
 
-  if (!g_ledBound || !linkReady) {
+  if (!g_ledBound || (!linkReady && !wifiActive)) {
     // KO: 誘몃컮슫뱶/留곹겕 誘몄鍮 -> 젣뼱/鍮꾪뻾 湲덉
     // EN: Not bound or link not ready -> no control / no flight
     currentMode = MODE_READY;
@@ -1951,6 +1957,10 @@ static inline void updateSystem(){
     return;
   }
   updateRadio();
+  wifiSelectInput(receiverDataRc, receiverData);
+  if(receiverData.speed >= 1 && receiverData.speed <= 3){
+    speedLevel = receiverData.speed - 1;
+  }
 
   // KO: AUX1=2 옄씠濡 珥덇린솕 슂泥 (READY + 뒪濡쒗 궙쓬)
   // EN: Gyro init request via AUX1=2 (READY + low throttle)
