@@ -97,13 +97,13 @@ POST FAIL -> FLIGHT LOCK (IMU=0 BARO=1 TOF=1 FLOW=1)
 - Binding mode: power on AF1000X upside down, then pair with AR1000X
 
 ## Wi-Fi App Control (Experimental)
-- Connect to SSID `SYUBEA_1500AB`
+- Connect to SSID `SYUBEA_XXXXXX` (MAC-based suffix)
 - Target IP/Port: `192.168.169.1:8800` (UDP)
 - Wi-Fi AP starts after POST and auto-off after 15 s if no client connects
 
 ## Wi-Fi Control (Experimental)
 - AP starts after POST; if no client connects within 15 s, Wi-Fi turns off.
-- Test SSID: `SYUBEA_1500AB`
+- Test SSID: `SYUBEA_XXXXXX` (MAC-based suffix)
 - IP: `192.168.169.1`, UDP port: `8800`
 - Wi-Fi input maps to RC channels (Throttle/Roll/Pitch/Yaw).
 - Supported commands: headless, auto takeoff, gyro reset, emergency stop, flip.
@@ -289,7 +289,7 @@ POST FAIL -> FLIGHT LOCK (IMU=0 BARO=1 TOF=1 FLOW=1)
 
 
 ## Wi-Fi 앱 조종(실험)
-- SSID: `SYUBEA_1500AB`
+- SSID: `SYUBEA_XXXXXX` (MAC 기반)
 - 대상 IP/포트: `192.168.169.1:8800` (UDP)
 - POST 후 AP 시작, 15초 내 미연결 시 자동 OFF
 
@@ -463,7 +463,7 @@ POST FAIL -> FLIGHT LOCK (IMU=0 BARO=1 TOF=1 FLOW=1)
 
 
 ## Wi-Fiアプリ操作 (実験)
-- SSID: `SYUBEA_1500AB`
+- SSID: `SYUBEA_XXXXXX` (MACベース)
 - 送信先IP/ポート: `192.168.169.1:8800` (UDP)
 - POST後にAP開始。15秒以内に接続がなければ自動OFF
 
